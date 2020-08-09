@@ -26,6 +26,7 @@ Legend:
 | Audio jack                   | :heavy_check_mark:  |                                                                               |
 | Wifi and Bluetooth           | :heavy_check_mark:  |                                                                               |
 | Webcam                       | :heavy_check_mark:  |                                                                               |
+| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](###Graphic))                           |
 
 ## Fixes
 
