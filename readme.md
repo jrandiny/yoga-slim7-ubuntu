@@ -10,23 +10,22 @@ This are various tweaks and fix to run Linux on Lenovo Yoga Slim 7. This note is
 
 Legend:
 - :heavy_check_mark: Works out of the box (Kernel 5.4)
-- :white_check_mark: Works on latest kernel (Tested with Kernel 5.8)
 - :hammer_and_wrench: Require tweaking
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
 
-| Feature                      | Status             | Description                                                                   |
-| ---------------------------- | ------------------ | ----------------------------------------------------------------------------- |
-| Power (battery and charging) | :heavy_check_mark: |                                                                               |
-| Storage                      | :heavy_check_mark: | Disable bitlocker on windows to access windows partition from Linux           |
-| Graphic                      | :white_check_mark: | Kernel update is required (see )                                              |
-| USB                          | :heavy_check_mark: |                                                                               |
-| Keyboard                     | :heavy_check_mark: |                                                                               |
-| Speakers                     | :heavy_check_mark: |                                                                               |
-| Microphone                   | :question:         | It's working on my device but there are some reports online stating otherwise |
-| Audio jack                   | :heavy_check_mark: |                                                                               |
-| Wifi and Bluetooth           | :heavy_check_mark: |                                                                               |
-| Webcam                       | :heavy_check_mark: |                                                                               |
+| Feature                      | Status              | Description                                                                   |
+| ---------------------------- | ------------------- | ----------------------------------------------------------------------------- |
+| Power (battery and charging) | :heavy_check_mark:  |                                                                               |
+| Storage                      | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux           |
+| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](###Graphic))                           |
+| USB                          | :heavy_check_mark:  |                                                                               |
+| Keyboard                     | :heavy_check_mark:  |                                                                               |
+| Speakers                     | :heavy_check_mark:  |                                                                               |
+| Microphone                   | :question:          | It's working on my device but there are some reports online stating otherwise |
+| Audio jack                   | :heavy_check_mark:  |                                                                               |
+| Wifi and Bluetooth           | :heavy_check_mark:  |                                                                               |
+| Webcam                       | :heavy_check_mark:  |                                                                               |
 
 ## Fixes
 
