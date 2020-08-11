@@ -83,7 +83,7 @@ All of the following commands assume root shell
 
 Download and compile from https://www.acpica.org/downloads
 ```bash
-# Install some required depedencies
+# Install some required dependencies
 apt install m4 build-essential bison flex
 
 # Download and extract
