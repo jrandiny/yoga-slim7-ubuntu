@@ -18,7 +18,7 @@ Legend:
 | ---------------------------- | ------------------- | --------------------------------------------------------------------- |
 | Power (battery and charging) | :heavy_check_mark:  |                                                                       |
 | Storage                      | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux   |
-| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](###Graphic))                   |
+| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                     |
 | USB                          | :heavy_check_mark:  |                                                                       |
 | Keyboard                     | :heavy_check_mark:  |                                                                       |
 | Speakers                     | :heavy_check_mark:  |                                                                       |
@@ -26,8 +26,8 @@ Legend:
 | Audio jack                   | :heavy_check_mark:  |                                                                       |
 | Wifi and Bluetooth           | :heavy_check_mark:  |                                                                       |
 | Webcam                       | :heavy_check_mark:  |                                                                       |
-| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](###Graphic))                   |
-| Suspend                      | :hammer_and_wrench: | See detail [below](###Suspend)                                        |
+| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                     |
+| Suspend                      | :hammer_and_wrench: | See detail [below](#Suspend)                                          |
 
 ## Fixes
 
