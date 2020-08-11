@@ -31,6 +31,8 @@ Legend:
 
 ## Fixes
 
+**DISCLAIMER** I am not responsible for any damage and negative consequences to your system
+
 ### Graphic
 
 By default Ubuntu 20.04.1 shipped with Linux 5.4, support for AMD 4000 graphics is still experimental on 5.4. To get the best result wait for Ubuntu 20.04.2 or upgrade manually to the latest stable kernel (5.8 by the time of publication).
