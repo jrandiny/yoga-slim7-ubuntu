@@ -164,7 +164,13 @@ There's seem to be a problem with the default grub package on Ubuntu (https://bu
 Download the 10_linux.patch from this repo and move it to `/etc/grub.d`
 ```bash
 cd /etc/grub.d
+# Backup original
+cp 10_linux ../10_linux.orig
+
+# Patch
 patch <10_linux.patch
+
+# Update grub
 update-grub
 ```
 
