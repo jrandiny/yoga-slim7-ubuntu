@@ -1,0 +1,15 @@
+--- 10_linux.orig	2020-08-11 13:31:23.463915373 +0700
++++ 10_linux	2020-08-11 13:31:56.619382327 +0700
+@@ -276,8 +276,11 @@
+ 	echo	'$(echo "$message" | grub_quote)'
+ EOF
+             fi
++            for i in ${initrd}; do
++              initrd_path="${initrd_path} ${rel_dirname}/${i}"
++            done
+             sed "s/^/$submenu_indentation/" << EOF
+-	initrd	${rel_dirname}/${initrd}
++	initrd	${initrd_path}
+ EOF
+         fi
+     fi

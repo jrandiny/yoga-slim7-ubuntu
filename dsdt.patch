@@ -1,0 +1,114 @@
+--- dsdt.dsl	2020-08-11 11:34:59.394093455 +0700
++++ dsdt_fix.dsl	2020-08-11 11:30:23.635049000 +0700
+@@ -1,63 +1,3 @@
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.VER1], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.VER2], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI0], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI1], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI2], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI3], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI4], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI5], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI6], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI7], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI8], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI9], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIA], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIB], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIC], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGID], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIE], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIF], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI0], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI1], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI2], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI3], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS0], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS1], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS2], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS3], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS4], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS5], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS6], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS7], AE_NOT_FOUND (20200717/dswload-495)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.VER1], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.VER2], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI0], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI1], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI2], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI3], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI4], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI5], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI6], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI7], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI8], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGI9], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIA], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIB], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIC], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGID], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIE], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.MGIF], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI0], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI1], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI2], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.CCI3], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS0], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS1], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS2], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS3], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS4], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS5], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS6], AE_NOT_FOUND (20200717/dswload2-479)
+-Firmware Error (ACPI): Could not resolve symbol [^^^UBTC.STS7], AE_NOT_FOUND (20200717/dswload2-479)
+ /*
+  * Intel ACPI Component Architecture
+  * AML/ASL+ Disassembler version 20200717 (64-bit version)
+@@ -78,7 +18,7 @@
+  *     Compiler ID      "    "
+  *     Compiler Version 0x01000013 (16777235)
+  */
+-DefinitionBlock ("", "DSDT", 1, "LENOVO", "CB-01   ", 0x00000001)
++DefinitionBlock ("", "DSDT", 1, "LENOVO", "CB-01   ", 0x00000002)
+ {
+     External (_GPE, DeviceObj)
+     External (_SB_.ALIB, MethodObj)    // 2 Arguments
+@@ -977,20 +917,13 @@
+         Zero, 
+         Zero
+     })
+-    If ((CNSB == Zero))
++    Name (_S3, Package (0x04)  // _S3_: S3 System State
+     {
+-        If ((DAS3 == One))
+-        {
+-            Name (_S3, Package (0x04)  // _S3_: S3 System State
+-            {
+-                0x03, 
+-                0x03, 
+-                Zero, 
+-                Zero
+-            })
+-        }
+-    }
+-
++        0x03, 
++        0x03, 
++        Zero, 
++        Zero
++    })
+     Name (_S4, Package (0x04)  // _S4_: S4 System State
+     {
+         0x04, 
+@@ -11377,11 +11310,6 @@
+ 
+                                 Local0 |= One
+                             }
+-                            Case (Zero)
+-                            {
+-                                Local0 |= Zero
+-                                Local0 |= 0x02
+-                            }
+                             Default
+                             {
+                                 Local0 |= Zero
