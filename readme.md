@@ -157,7 +157,7 @@ GRUB_EARLY_INITRD_LINUX_CUSTOM="acpi_s3_override"
 
 **NOTE**
 
-There's seem to be a problem with the default grub package on Ubuntu (https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/1891131) preventing the use of `GRUB_EARLY_INITRD_LINUX_CUSTOM` option. In the meantime, you can either patch the config generator or adding the required modification to grub.cfg manually. 
+There's seem to be a problem with the default grub package on Ubuntu (https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/1878705) preventing the use of `GRUB_EARLY_INITRD_LINUX_CUSTOM` option. In the meantime, you can either patch the config generator or adding the required modification to grub.cfg manually. 
 
 **Option 1 - Patching the config generator**
 
