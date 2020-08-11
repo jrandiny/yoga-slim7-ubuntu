@@ -71,11 +71,11 @@ amdgpu 0000:03:00.0: [drm:amdgpu_ring_test_helper [amdgpu]] *ERROR* ring gfx tes
 There are three solutions:
 - Wait until the problem in amdgpu driver is fixed in newer kernel version
 - Wait until Lenovo adds an option in the UEFI to advertise S3 support (similar to the options available in Thinkpad)
-- Modify the system to advertise S3 support
+- Modify the system to advertise S3 support (see below)
 
 #### Advertise S3
 
-All of the following command assume root shell
+All of the following commands assume root shell
 
 1. Get the required tools
 
@@ -146,7 +146,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash mem_sleep_default=deep"
 
 7. Set grub to use the override 
 
-Open `etc/default/grub` and add `mem_sleep_default=deep` to `GRUB_CMDLINE_LINUX_DEFAULT` then run `update-grub`
+Open `etc/default/grub` and add `acpi_s3_override` to `GRUB_CMDLINE_LINUX_DEFAULT` then run `update-grub`
 
 Example:
 ```
