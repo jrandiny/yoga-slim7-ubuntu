@@ -79,7 +79,7 @@ There are three solutions:
 
 All of the following commands assume root shell
 
-1. Get the required tools
+**1. Get the required tools**
 
 Download and compile from https://www.acpica.org/downloads
 ```bash
@@ -99,7 +99,7 @@ make
 PATH=$PATH:$(realpath ./generate/unix/bin/)
 ```
 
-2. Dump the ACPI files and decompile the DSDT table
+**2. Dump the ACPI files and decompile the DSDT table**
 
 ```bash
 # Create new working directory
@@ -113,21 +113,21 @@ acpidump -b
 iasl -e *.dat -d dsdt.dat
 ```
 
-3. Apply patch
+**3. Apply patch**
 
 Copy dsdt.patch from this repo and patch dsdt.dsl
 ```bash
 patch <dsdt.patch
 ```
 
-4. Recompile the modified table
+**4. Recompile the modified table**
 
 ```bash
 # Recompile dsdt to new hex asml table (ignore warning)
 iasl -ve -tc dsdt.dsl
 ```
 
-5. Make override archive
+**5. Make override archive**
 ```bash
 mkdir -p kernel/firmware/acpi
 cp dsdt.aml kernel/firmware/acpi
@@ -137,7 +137,7 @@ find kernel | cpio -H newc --create > acpi_s3_override
 cp acpi_s3_override /boot/
 ```
 
-6. set the default sleep type to S3 (deep)
+**6. Set the default sleep type to S3 (deep)**
 
 Open `etc/default/grub` and add `mem_sleep_default=deep` to `GRUB_CMDLINE_LINUX_DEFAULT` then run `update-grub`
 
@@ -146,7 +146,7 @@ Example:
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash mem_sleep_default=deep"
 ```
 
-7. Set grub to use the override 
+**7. Set grub to use the override**
 
 Open `etc/default/grub` and add `acpi_s3_override` to `GRUB_CMDLINE_LINUX_DEFAULT` then run `update-grub`
 
