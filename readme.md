@@ -77,7 +77,7 @@ There are three solutions:
 
 #### Advertise S3
 
-All of the following commands assume root shell
+All of the following commands assume **root shell** (sudo -i)
 
 **1. Get the required tools**
 
