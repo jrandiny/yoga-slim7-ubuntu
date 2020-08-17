@@ -77,7 +77,13 @@ There are three solutions:
 
 #### Advertise S3
 
+**0. Important notes**
+
 All of the following commands assume **root shell** (sudo -i)
+
+```bash
+sudo -i
+```
 
 **1. Get the required tools**
 
