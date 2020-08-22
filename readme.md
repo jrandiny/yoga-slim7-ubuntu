@@ -41,7 +41,7 @@ Some of the ways to upgrade the kernel:
 - https://github.com/pimlie/ubuntu-mainline-kernel.sh
 - https://github.com/bkw777/mainline
 
-**Note: If you encounter `error: /vmlinux-<version number> has invalid signature.` on boot, you need to disable secure boot on the UEFI setting**
+**Note: If you encounter `error: /vmlinux-<version number> has invalid signature.` on boot, you need to disable secure boot on the UEFI setting or follow https://gist.github.com/maxried/796d1f3101b3a03ca153fa09d3af8a11**
 
 ### Suspend
 
