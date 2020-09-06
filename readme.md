@@ -156,7 +156,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash mem_sleep_default=deep"
 
 **7. Set grub to use the override**
 
-Open `etc/default/grub` and add `acpi_s3_override` to `GRUB_CMDLINE_LINUX_DEFAULT` then run `update-grub`
+Open `etc/default/grub` and add `acpi_s3_override` to `GRUB_EARLY_INITRD_LINUX_CUSTOM` then run `update-grub`
 
 Example:
 ```
