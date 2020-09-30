@@ -169,7 +169,7 @@ GRUB_EARLY_INITRD_LINUX_CUSTOM="acpi_s3_override"
 
 The bug is fixed on grub-common 2.04-1ubuntu26.3 :)
 
-Make sure you update your system to the latest version (`apt update && apt upgrade`) and ignore steps bellow
+Make sure you update your system to the latest version (`apt update && apt upgrade`) and ignore steps below
 
 **Option 1 - Patching the config generator**
 
