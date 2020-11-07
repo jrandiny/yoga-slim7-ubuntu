@@ -21,7 +21,7 @@ Legend:
 | Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                     |
 | USB                          | :heavy_check_mark:  |                                                                       |
 | Keyboard                     | :heavy_check_mark:  |                                                                       |
-| Speakers                     | :heavy_check_mark:  |                                                                       |
+| Speakers                     | :heavy_check_mark:  | Should work, but if you have no audio see [below](#Audio)             |
 | Microphone                   | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version |
 | Audio jack                   | :heavy_check_mark:  |                                                                       |
 | Wifi and Bluetooth           | :heavy_check_mark:  |                                                                       |
@@ -206,6 +206,8 @@ Add `/boot/acpi_s3_override` in the middle
 initrd /boot/acpi_override /boot/initrd.img-5.8.0-050800-generic
 ```
 
+### Audio
+If you see only a `Dummy Output` device in your audio-devices list, especially after upgrading the kernel to the latest mainline (5.9.6 at the time when this note is being written), try adding `blacklist snd_acp3x_rn` at the end of file `/etc/modprobe.d/blacklist.conf` and reboot.
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
