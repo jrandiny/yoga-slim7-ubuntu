@@ -209,6 +209,8 @@ initrd /boot/acpi_override /boot/initrd.img-5.8.0-050800-generic
 ### Audio
 If you see only a `Dummy Output` device in your audio-devices list, especially after upgrading the kernel to the latest mainline (5.9.6 at the time when this note is being written), try adding `blacklist snd_acp3x_rn` at the end of file `/etc/modprobe.d/blacklist.conf` and reboot.
 
+**Warning** This fix may break mic input, I'm still investigating
+
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
 - https://www.reddit.com/r/linuxhardware/comments/i28nm5/ideapad_14are05_s3_sleep_fix/ 
