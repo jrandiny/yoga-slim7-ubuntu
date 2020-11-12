@@ -14,20 +14,20 @@ Legend:
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
 
-| Feature                      | Status              | Description                                                           |
-| ---------------------------- | ------------------- | --------------------------------------------------------------------- |
-| Power (battery and charging) | :heavy_check_mark:  |                                                                       |
-| Storage                      | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux   |
-| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                     |
-| USB                          | :heavy_check_mark:  |                                                                       |
-| Keyboard                     | :heavy_check_mark:  |                                                                       |
-| Speakers                     | :heavy_check_mark:  | Should work, but if you have no audio see [below](#Audio)             |
-| Microphone                   | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version |
-| Audio jack                   | :heavy_check_mark:  |                                                                       |
-| Wifi and Bluetooth           | :heavy_check_mark:  |                                                                       |
-| Webcam                       | :heavy_check_mark:  |                                                                       |
-| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                     |
-| Suspend                      | :hammer_and_wrench: | See detail [below](#Suspend)                                          |
+| Feature                      | Status              | Description                                                                         |
+| ---------------------------- | ------------------- | ----------------------------------------------------------------------------------- |
+| Power (battery and charging) | :heavy_check_mark:  |                                                                                     |
+| Storage                      | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux                 |
+| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                                   |
+| USB                          | :heavy_check_mark:  |                                                                                     |
+| Keyboard                     | :heavy_check_mark:  |                                                                                     |
+| Speakers                     | :heavy_check_mark:  | Should work on older software but broken on up to date system (see [below](#Audio)) |
+| Microphone                   | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version               |
+| Audio jack                   | :heavy_check_mark:  |                                                                                     |
+| Wifi and Bluetooth           | :heavy_check_mark:  |                                                                                     |
+| Webcam                       | :heavy_check_mark:  |                                                                                     |
+| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                                   |
+| Suspend                      | :hammer_and_wrench: | See detail [below](#Suspend)                                                        |
 
 ## Fixes
 
@@ -207,11 +207,12 @@ initrd /boot/acpi_override /boot/initrd.img-5.8.0-050800-generic
 ```
 
 ### Audio
-If you see only a `Dummy Output` device in your audio-devices list, especially after upgrading the kernel to the latest mainline (5.9.6 at the time when this note is being written), try adding `blacklist snd_acp3x_rn` at the end of file `/etc/modprobe.d/blacklist.conf` and reboot.
+If you see only a `Dummy Output` device in your audio-devices list, especially after updating your system, try adding `options snd-hda-intel index=1` to `/etc/modprobe.d/alsa-base.conf`and reboot
 
-**Warning** This fix may break mic input, I'm still investigating
+**Warning** This fix may break HDMI audio out, I'm still investigating
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
+- @nopmop for the audio workaround
 - https://www.reddit.com/r/linuxhardware/comments/i28nm5/ideapad_14are05_s3_sleep_fix/ 
 - https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33)
