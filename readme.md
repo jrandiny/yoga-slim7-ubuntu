@@ -207,9 +207,13 @@ initrd /boot/acpi_override /boot/initrd.img-5.8.0-050800-generic
 ```
 
 ### Audio
-If you see only a `Dummy Output` device in your audio-devices list, especially after updating your system, try adding `options snd-hda-intel index=1` to `/etc/modprobe.d/alsa-base.conf`and reboot
+If you see only a `Dummy Output` device in your audio-devices list, it is caused by a regression on ALSA https://bugs.launchpad.net/ubuntu/+source/alsa-lib/+bug/1901922
 
-**Warning** This fix may break HDMI audio out, I'm still investigating
+Fix on the way
+
+In the meantime, try adding `options snd-hda-intel index=1` to `/etc/modprobe.d/alsa-base.conf`and reboot
+
+**Warning** This workaround will break HDMI audio out, please wait for the official fix from Ubuntu
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
