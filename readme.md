@@ -165,6 +165,13 @@ Example:
 GRUB_EARLY_INITRD_LINUX_CUSTOM="acpi_s3_override"
 ```
 
+**8. Secure boot**
+If you are using mainline kernel, skip this step.
+
+If you are using the official kernel (for example in Ubuntu 20.10) be aware that you need to disable secure boot because of the default behaviour of Ubuntu kernel (relevant discussion [#10](https://github.com/jrandiny/yoga-slim7-ubuntu/issues/10)).
+
+
+
 ### Audio
 If you see only a `Dummy Output` device in your audio-devices list, it is caused by a regression on ALSA https://bugs.launchpad.net/ubuntu/+source/alsa-lib/+bug/1901922
 
