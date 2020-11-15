@@ -156,54 +156,13 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash mem_sleep_default=deep"
 
 **7. Set grub to use the override**
 
+**Note: There's a bug in older version of grub shipped with Ubuntu, make sure you upgrade your system before performing this step** 
+
 Open `etc/default/grub` and add `acpi_s3_override` to `GRUB_EARLY_INITRD_LINUX_CUSTOM` then run `update-grub`
 
 Example:
 ```
 GRUB_EARLY_INITRD_LINUX_CUSTOM="acpi_s3_override"
-```
-
-**NOTE**
-
-~~There's seem to be a problem with the default grub package on Ubuntu (https://bugs.launchpad.net/ubuntu/+source/grub2/+bug/1878705) preventing the use of `GRUB_EARLY_INITRD_LINUX_CUSTOM` option. In the meantime, you can either patch the config generator or adding the required modification to grub.cfg manually.~~
-
-The bug is fixed on grub-common 2.04-1ubuntu26.3 :)
-
-However you still need to run `update-grub` to update grub.cfg
-
-Make sure you update your system to the latest version (`apt update && apt upgrade`) and ignore steps below
-
-**Option 1 - Patching the config generator**
-
-(This is no longer necessary, see above)
-
-Download the 10_linux.patch from this repo and move it to `/etc/grub.d`
-```bash
-cd /etc/grub.d
-# Backup original
-cp 10_linux ../10_linux.orig
-
-# Patch
-patch <10_linux.patch
-
-# Update grub
-update-grub
-```
-
-**Option 2 - Manually edit grub.cfg**
-
-(This is no longer necessary, see above)
-
-Open `/boot/grub/grub.cfg` and search for the every line starting with `initrd` followed by initrd image
-
-```
-initrd /boot/initrd.img-5.8.0-050800-generic
-```
-
-Add `/boot/acpi_s3_override` in the middle
-
-```
-initrd /boot/acpi_override /boot/initrd.img-5.8.0-050800-generic
 ```
 
 ### Audio
