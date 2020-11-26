@@ -176,14 +176,7 @@ If you are using the official kernel (for example in Ubuntu 20.10) be aware that
 ### Audio
 If you see only a `Dummy Output` device in your audio-devices list, it is caused by a regression on ALSA https://bugs.launchpad.net/ubuntu/+source/alsa-lib/+bug/1901922
 
-Fix is on the way
-
-In the meantime there are two temporary solution
-
-1. Updating `alsa-ucm-conf`, `libasound2`, and `libasound2-data` to the latest version from the proposed repository (https://wiki.ubuntu.com/Testing/EnableProposed)
-2. Adding `options snd-hda-intel index=1` to `/etc/modprobe.d/alsa-base.conf` and reboot
-
-**Warning** The second workaround will break HDMI audio out, please use the first solution if possible or wait for the official fix from Ubuntu 
+Fix is released, please update your system `apt update && apt upgrade`
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
