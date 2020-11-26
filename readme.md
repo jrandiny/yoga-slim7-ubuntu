@@ -3,7 +3,7 @@
 ## About
 
 This are various tweaks and fix to run Linux on Lenovo Yoga Slim 7. This note is validated on the following configuration
-- Ubuntu 20.04.1
+- Ubuntu 20.04.1 and 20.10
 - Lenovo Yoga Slim 7 AMD (Ryzen 7)
 
 ## Summary
@@ -14,20 +14,20 @@ Legend:
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
 
-| Feature                      | Status              | Description                                                                         |
-| ---------------------------- | ------------------- | ----------------------------------------------------------------------------------- |
-| Power (battery and charging) | :heavy_check_mark:  |                                                                                     |
-| Storage                      | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux                 |
-| Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                                   |
-| USB                          | :heavy_check_mark:  |                                                                                     |
-| Keyboard                     | :heavy_check_mark:  |                                                                                     |
-| Speakers                     | :heavy_check_mark:  | Should work on older software but broken on some system (see [below](#Audio))       |
-| Microphone                   | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version               |
-| Audio jack                   | :heavy_check_mark:  |                                                                                     |
-| Wifi and Bluetooth           | :heavy_check_mark:  |                                                                                     |
-| Webcam                       | :heavy_check_mark:  |                                                                                     |
-| External display (HDMI)      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                                   |
-| Suspend                      | :hammer_and_wrench: | See detail [below](#Suspend)                                                        |
+| Feature                      | Status 20.04.1      | Status 20.10        | Description                                                                         |
+| ---------------------------- | ------------------- | ------------------- | ----------------------------------------------------------------------------------- |
+| Power (battery and charging) | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| Storage                      | :heavy_check_mark:  | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux                 |
+| Graphic                      | :hammer_and_wrench: | :heavy_check_mark:  | Kernel update is required (see [below](#Graphic))                                   |
+| USB                          | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| Keyboard                     | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| Speakers                     | :heavy_check_mark:  | :heavy_check_mark:  | Should work on older software but broken on some system (see [below](#Audio))       |
+| Microphone                   | :heavy_check_mark:  | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version               |
+| Audio jack                   | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| Wifi and Bluetooth           | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| Webcam                       | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
+| External display (HDMI)      | :hammer_and_wrench: | :heavy_check_mark:  | Kernel update is required (see [below](#Graphic))                                   |
+| Suspend                      | :hammer_and_wrench: | :hammer_and_wrench: | See detail [below](#Suspend)                                                        |
 
 ## Fixes
 
