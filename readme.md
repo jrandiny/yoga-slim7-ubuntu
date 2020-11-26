@@ -21,7 +21,7 @@ Legend:
 | Graphic                      | :hammer_and_wrench: | Kernel update is required (see [below](#Graphic))                                   |
 | USB                          | :heavy_check_mark:  |                                                                                     |
 | Keyboard                     | :heavy_check_mark:  |                                                                                     |
-| Speakers                     | :heavy_check_mark:  | Should work on older software but broken on up to date system (see [below](#Audio)) |
+| Speakers                     | :heavy_check_mark:  | Should work on older software but broken on some system (see [below](#Audio))       |
 | Microphone                   | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version               |
 | Audio jack                   | :heavy_check_mark:  |                                                                                     |
 | Wifi and Bluetooth           | :heavy_check_mark:  |                                                                                     |
