@@ -29,6 +29,10 @@ Legend:
 | External display (HDMI)      | :hammer_and_wrench: | :heavy_check_mark:  | Kernel update is required (see [below](#Graphic))                                   |
 | Suspend                      | :hammer_and_wrench: | :hammer_and_wrench: | See detail [below](#Suspend)                                                        |
 
+## System Output
+
+`lsusb`, `lspci` and other output can be found on the [System Output](system-output.md) page.
+
 ## Fixes
 
 **DISCLAIMER** I am not responsible for any damage and negative consequences to your system
