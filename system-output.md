@@ -2,11 +2,13 @@
 
 Various system outputs on Ubuntu 20.10 on a Lenovo Yoga 7 slim (AMD).
 Third party proprietary drivers were allowed during the installation.
-
-* [uname](#uname--a)
-* [lsusb](#lsusb) / [lsusb -v](#lsusb--v)
-* [lspci](#lspci) / [lspci -v](#lspci--v)
-* [cpuinfo](#cpuinfo)
+- [System Output](#system-output)
+  - [uname -a](#uname--a)
+  - [lsusb](#lsusb)
+  - [lspci](#lspci)
+  - [lspci -v](#lspci--v)
+  - [lsusb -v](#lsusb--v)
+  - [cpuinfo](#cpuinfo)
 
 ## uname -a
 
@@ -15,7 +17,7 @@ $ uname -a
 Linux test 5.8.0-33-generic #36-Ubuntu SMP Wed Dec 9 09:14:40 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
-### lsusb
+## lsusb
 
 ```
 $ lsusb
@@ -24,7 +26,6 @@ Bus 003 Device 002: ID 8087:0029 Intel Corp. AX200 Bluetooth
 Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 003: ID 04f2:b6cb Chicony Electronics Co., Ltd Integrated Camera
-Bus 001 Device 005: ID 058f:6387 Alcor Micro Corp. Flash Drive
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
