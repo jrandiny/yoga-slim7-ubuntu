@@ -93,22 +93,9 @@ sudo -i
 
 **1. Get the required tools**
 
-Download and compile from https://www.acpica.org/downloads
 ```bash
 # Install some required dependencies
-apt install m4 build-essential bison flex
-
-# Download and extract
-wget https://acpica.org/sites/acpica/files/acpica-unix-20200717.tar.gz
-tar -xvf acpica-unix-20200717.tar.gz
-cd acpica-unix-20200717
-
-# Make
-make clean
-make
-
-# Add to PATH for easy access
-PATH=$PATH:$(realpath ./generate/unix/bin/)
+apt install acpica-tools
 ```
 
 **2. Dump the ACPI files and decompile the DSDT table**
@@ -127,7 +114,16 @@ iasl -e *.dat -d dsdt.dat
 
 **3. Apply patch**
 
-Copy dsdt.patch from this repo and patch dsdt.dsl
+First, remove garbage from the source file:
+
+```bash
+sed -i '/^Firmware Error/d' dsdt.dsl
+```
+
+_(The exact content depends on the acpidump version.)_
+
+Then copy dsdt.patch from this repo and patch `dsdt.dsl`:
+
 ```bash
 patch <dsdt.patch
 ```
