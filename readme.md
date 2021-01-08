@@ -178,8 +178,19 @@ If you see only a `Dummy Output` device in your audio-devices list, it is caused
 
 Fix is released, please update your system `apt update && apt upgrade`
 
+If it's not (for example, on _Debian testing_), as a workaround, create a file
+`/etc/modprobe.d/alsa-base.conf` containing:
+
+```
+options snd_hda_intel index=1,0
+```
+
+Then reboot.
+
+
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
 - @nopmop for the audio workaround
 - https://www.reddit.com/r/linuxhardware/comments/i28nm5/ideapad_14are05_s3_sleep_fix/ 
 - https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33)
+- https://bbs.archlinux.org/viewtopic.php?id=238678
