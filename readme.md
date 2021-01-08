@@ -135,6 +135,14 @@ patch <dsdt.patch
 iasl -ve -tc dsdt.dsl
 ```
 
+**Note :**
+
+It seems there are some model shipped with the first revision of the dsdt table. For those system the compilation will most likely fail. In order to fix that you can apply the `rev1.patch` provided in addition to the `dsdt.patch`. To make sure you have the first revision of the table check the decompiled file for the following line
+
+```
+*     OEM Revision     0x00000001 (1)
+```
+
 **5. Make override archive**
 ```bash
 mkdir -p kernel/firmware/acpi

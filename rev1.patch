@@ -1,0 +1,23 @@
+diff --git a/dsdt.dsl b/dsdt.dsl
+index 09358bf..047ef2a 100644
+--- a/dsdt.dsl
++++ b/dsdt.dsl
+@@ -26,7 +26,7 @@ DefinitionBlock ("", "DSDT", 1, "LENOVO", "CB-01   ", 0x00000001)
+     External (_SB_.AWAK, MethodObj)    // 1 Arguments
+     External (_SB_.CMSO, MethodObj)    // 2 Arguments
+     External (_SB_.PCI0.GFX0.VGA_.LCD_, DeviceObj)
+-    External (_SB_.PCI0.GP17.VGA_.AFN7, UnknownObj)
++    External (_SB_.PCI0.GP17.VGA_.AFN7, MethodObj)    // 1 Arguments
+     External (_SB_.PCI0.LPC0.EC__.PSD1, BuffFieldObj)
+     External (_SB_.PCI0.M019, MethodObj)    // 4 Arguments
+     External (_SB_.PCI0.M020, MethodObj)    // 5 Arguments
+@@ -56,8 +56,7 @@ DefinitionBlock ("", "DSDT", 1, "LENOVO", "CB-01   ", 0x00000001)
+     External (_SB_.UBTC.VER1, FieldUnitObj)
+     External (_SB_.UBTC.VER2, FieldUnitObj)
+     External (AFN4, MethodObj)    // 1 Arguments
+-    External (AFN7, MethodObj)    // 1 Arguments
+-    External (FIRT, UnknownObj)    // Conflicts with a later declaration
++    External (FIRT, UnknownObj)
+     External (MPTS, MethodObj)    // 1 Arguments
+     External (MWAK, MethodObj)    // 1 Arguments
+     External (UBTC, DeviceObj)
