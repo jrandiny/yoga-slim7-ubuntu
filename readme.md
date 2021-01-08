@@ -195,6 +195,9 @@ options snd_hda_intel index=1,0
 
 Then reboot.
 
+## Extra: BIOS Unlock
+
+Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
@@ -202,3 +205,4 @@ Then reboot.
 - https://www.reddit.com/r/linuxhardware/comments/i28nm5/ideapad_14are05_s3_sleep_fix/ 
 - https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33)
 - https://bbs.archlinux.org/viewtopic.php?id=238678
+- @esno and @FlyGoat for the bios unlock
