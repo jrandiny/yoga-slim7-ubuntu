@@ -14,20 +14,20 @@ Legend:
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
 
-| Feature                      | Status 20.04.1      | Status 20.10        | Description                                                                         |
-| ---------------------------- | ------------------- | ------------------- | ----------------------------------------------------------------------------------- |
-| Power (battery and charging) | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| Storage                      | :heavy_check_mark:  | :heavy_check_mark:  | Disable bitlocker on windows to access windows partition from Linux                 |
-| Graphic                      | :hammer_and_wrench: | :heavy_check_mark:  | Kernel update is required (see [below](#Graphic))                                   |
-| USB                          | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| Keyboard                     | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| Speakers                     | :heavy_check_mark:  | :heavy_check_mark:  | Should work on older software but broken on some system (see [below](#Audio))       |
-| Microphone                   | :heavy_check_mark:  | :heavy_check_mark:  | It seems there's a bug on kernel 5.7, please use other kernel version               |
-| Audio jack                   | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| Wifi and Bluetooth           | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| Webcam                       | :heavy_check_mark:  | :heavy_check_mark:  |                                                                                     |
-| External display (HDMI)      | :hammer_and_wrench: | :heavy_check_mark:  | Kernel update is required (see [below](#Graphic))                                   |
-| Suspend                      | :hammer_and_wrench: | :hammer_and_wrench: | See detail [below](#Suspend)                                                        |
+| Feature                      | Status 20.04.1 and 20.04 | Status 20.04.2 and 20.10 | Description                                                                   |
+| ---------------------------- | ------------------------ | ------------------------ | ----------------------------------------------------------------------------- |
+| Power (battery and charging) | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Storage                      | :heavy_check_mark:       | :heavy_check_mark:       | Disable bitlocker on windows to access windows partition from Linux           |
+| Graphic                      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                             |
+| USB                          | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Keyboard                     | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Speakers                     | :heavy_check_mark:       | :heavy_check_mark:       | Should work on older software but broken on some system (see [below](#Audio)) |
+| Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version         |
+| Audio jack                   | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Webcam                       | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| External display (HDMI)      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                             |
+| Suspend                      | :hammer_and_wrench:      | :hammer_and_wrench:      | See detail [below](#Suspend)                                                  |
 
 ## System Output
 
@@ -39,9 +39,11 @@ Legend:
 
 ### Graphic
 
-By default Ubuntu 20.04.1 shipped with Linux 5.4, support for AMD 4000 graphics is still experimental on 5.4. To get the best result wait for Ubuntu 20.04.2 or upgrade manually to the latest stable kernel (5.8 by the time of publication).
+By default Ubuntu 20.04.1 shipped with Linux 5.4, support for AMD 4000 graphics is still experimental on 5.4. To get the best result wait for Ubuntu 20.04.2 or upgrade manually to the latest stable kernel (5.8 by the time of publication). 
 
-Some of the ways to upgrade the kernel:
+However, Ubuntu 20.04.2 provide Linux 5.8 which is compatible with AMD 4000 graphics. Please update your system `apt update && apt upgrade` 
+
+If for some reason you can't update your kernel using the normal way, the following alternative can be used to upgrade the kernel:
 - https://github.com/pimlie/ubuntu-mainline-kernel.sh
 - https://github.com/bkw777/mainline
 
