@@ -3,13 +3,13 @@
 ## About
 
 This are various tweaks and fix to run Linux on Lenovo Yoga Slim 7. This note is validated on the following configuration
-- Ubuntu 20.04.1 and 20.10
+- Ubuntu 20.04.2 and 20.10
 - Lenovo Yoga Slim 7 AMD (Ryzen 7)
 
 ## Summary
 
 Legend:
-- :heavy_check_mark: Works out of the box (Kernel 5.4)
+- :heavy_check_mark: Works out of the box
 - :hammer_and_wrench: Require tweaking
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
