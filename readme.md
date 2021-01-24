@@ -199,6 +199,8 @@ Then reboot.
 
 ### Microphone
 
+This fix is for Linux 5.10.5+.
+
 Add `snd_rn_pci_acp3x.dmic_acpi_check=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`.
 
 Then update grub config by running `sudo update-grub` (for debian-based distos) and reboot.
