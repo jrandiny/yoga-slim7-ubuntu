@@ -22,7 +22,7 @@ Legend:
 | USB                          | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
 | Keyboard                     | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
 | Speakers                     | :heavy_check_mark:       | :heavy_check_mark:       | Should work on older software but broken on some system (see [below](#Audio)) |
-| Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version         |
+| Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version. On kernel 5.10.5+ microphone is broken again, see fix [below](#Microphone).         |
 | Audio jack                   | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
 | Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
 | Webcam                       | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
@@ -197,6 +197,14 @@ options snd_hda_intel index=1,0
 
 Then reboot.
 
+### Microphone
+
+This fix is for Linux 5.10.5+.
+
+Add `snd_rn_pci_acp3x.dmic_acpi_check=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`.
+
+Then update grub config by running `sudo update-grub` (for debian-based distos) and reboot.
+
 ## Extra: BIOS Unlock
 
 Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
@@ -208,3 +216,4 @@ Lenovo has hidden some advanced options that are useful for overclocking, enabli
 - https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33)
 - https://bbs.archlinux.org/viewtopic.php?id=238678
 - @esno and @FlyGoat for the bios unlock
+- https://forum.manjaro.org/t/amd-renoir-cpu-microphone-not-working-on-kernel-5-10-5/48463/12
