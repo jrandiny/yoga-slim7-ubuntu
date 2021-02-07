@@ -24,7 +24,7 @@ Legend:
 | Speakers                     | :heavy_check_mark:       | :heavy_check_mark:       | Should work on older software but broken on some system (see [below](#Audio)) |
 | Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version. On kernel 5.10.5+ microphone is broken again, see fix [below](#Microphone).         |
 | Audio jack                   | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
+| Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       | Connection through Wi-fi may be unavailable due to **Windows fast startup** (see [below](#Wifi)) |
 | Webcam                       | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
 | External display (HDMI)      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                             |
 | Suspend                      | :hammer_and_wrench:      | :hammer_and_wrench:      | See detail [below](#Suspend)                                                  |
@@ -204,6 +204,16 @@ This fix is for Linux 5.10.5+.
 Add `snd_rn_pci_acp3x.dmic_acpi_check=1` to `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub`.
 
 Then update grub config by running `sudo update-grub` (for debian-based distos) and reboot.
+
+### Wifi
+
+The Wifi card (Intel AX200) is natively supported with kernel 5.1+. However, some systems with Windows 10 installed may not show wi-fi connection available. A known cause is the **Windows fast startup**.
+
+The matter is fully discussed in the following community forums:
+- https://community.intel.com/t5/Wireless/Unstable-AX200-connection-in-Ubuntu-20-04/m-p/1205573#M30527
+- https://askubuntu.com/questions/1226036/intel-ax200-wi-fi-adapter-not-working
+
+If it is your case, just [disable it](https://www.windowscentral.com/how-disable-windows-10-fast-startup) and wi-fi must work without problems.
 
 ## Extra: BIOS Unlock
 
