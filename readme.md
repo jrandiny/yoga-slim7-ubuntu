@@ -14,20 +14,20 @@ Legend:
 - :negative_squared_cross_mark: Not working
 - :question: Unknown
 
-| Feature                      | Status 20.04.1 and 20.04 | Status 20.04.2 and 20.10 | Description                                                                   |
-| ---------------------------- | ------------------------ | ------------------------ | ----------------------------------------------------------------------------- |
-| Power (battery and charging) | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| Storage                      | :heavy_check_mark:       | :heavy_check_mark:       | Disable bitlocker on windows to access windows partition from Linux           |
-| Graphic                      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                             |
-| USB                          | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| Keyboard                     | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| Speakers                     | :heavy_check_mark:       | :heavy_check_mark:       | Should work on older software but broken on some system (see [below](#Audio)) |
-| Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version. On kernel 5.10.5+ microphone is broken again, see fix [below](#Microphone).         |
-| Audio jack                   | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       | Connection through Wi-fi may be unavailable due to **Windows fast startup** (see [below](#Wi-Fi)) |
-| Webcam                       | :heavy_check_mark:       | :heavy_check_mark:       |                                                                               |
-| External display (HDMI)      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                             |
-| Suspend                      | :hammer_and_wrench:      | :hammer_and_wrench:      | See detail [below](#Suspend)                                                  |
+| Feature                      | Status 20.04.1 and 20.04 | Status 20.04.2 and 20.10 | Description                                                                                                                                        |
+| ---------------------------- | ------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Power (battery and charging) | :heavy_check_mark:       | :heavy_check_mark:       |                                                                                                                                                    |
+| Storage                      | :heavy_check_mark:       | :heavy_check_mark:       | Disable bitlocker on windows to access windows partition from Linux                                                                                |
+| Graphic                      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                                                                                                  |
+| USB                          | :heavy_check_mark:       | :heavy_check_mark:       |                                                                                                                                                    |
+| Keyboard                     | :heavy_check_mark:       | :heavy_check_mark:       |                                                                                                                                                    |
+| Speakers                     | :heavy_check_mark:       | :heavy_check_mark:       | Should work on older software but broken on some system (see [below](#Audio))                                                                      |
+| Microphone                   | :heavy_check_mark:       | :heavy_check_mark:       | It seems there's a bug on kernel 5.7, please use other kernel version. On kernel 5.10.5+ microphone is broken again, see fix [below](#Microphone). |
+| Audio jack                   | :heavy_check_mark:       | :heavy_check_mark:       |                                                                                                                                                    |
+| Wifi and Bluetooth           | :heavy_check_mark:       | :heavy_check_mark:       | Connection through Wi-fi may be unavailable due to **Windows fast startup** (see [below](#Wi-Fi))                                                  |
+| Webcam                       | :heavy_check_mark:       | :heavy_check_mark:       |                                                                                                                                                    |
+| External display (HDMI)      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                                                                                                  |
+| Suspend                      | :hammer_and_wrench:      | :hammer_and_wrench:      | See detail [below](#Suspend)                                                                                                                       |
 
 ## System Output
 
@@ -221,6 +221,26 @@ If you encounter this problem, please [disable it](https://www.windowscentral.co
 
 Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
 
+## Extra: Battery Conservation Mode
+
+On Lenovo Vantage (the Windows 10 app) there's "Battery Conservation Mode" feature which limit battery charge to around 60% to increase battery lifespan. To enable this feature on Linux, you can use the following command.
+
+1. Make sure `ideapad_laptop` module is loaded
+```bash
+# Should not be empty
+lsmod | grep ideapad_laptop
+```
+
+2. Using root shell (`sudo -i`) run
+```bash
+# Turn on
+echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+# Turn off
+echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+```
+
+Tested on Kernel 5.8
+
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
 - @nopmop for the audio workaround
@@ -229,3 +249,4 @@ Lenovo has hidden some advanced options that are useful for overclocking, enabli
 - https://bbs.archlinux.org/viewtopic.php?id=238678
 - @esno and @FlyGoat for the bios unlock
 - https://forum.manjaro.org/t/amd-renoir-cpu-microphone-not-working-on-kernel-5-10-5/48463/12
+- https://wiki.archlinux.org/index.php/Laptop/Lenovo#Battery_Conservation_Mode_on_IdeaPad_laptops
