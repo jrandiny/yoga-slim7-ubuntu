@@ -83,7 +83,30 @@ amdgpu 0000:03:00.0: [drm:amdgpu_ring_test_helper [amdgpu]] *ERROR* ring gfx tes
 There are three solutions:
 - Wait until the problem in amdgpu driver is fixed in newer kernel version
 - Wait until Lenovo adds an option in the UEFI to advertise S3 support (similar to the options available in Thinkpad)
+- Enabling S3 (with BIOS version 1.33 and after) (see below)
 - Modify the system to advertise S3 support (see below)
+
+#### Enabling S3 (with BIOS version 1.33 and after)
+
+*Shamelessly copied from [arch linux wiki](https://wiki.archlinux.org/title/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33))*
+
+Since of May 17, 2019, Lenovo released firmware 1.33, which let you enable legacy S3 sleep in UEFI/BIOS. You can find the option in ThinkPad Setup: Config -> Power and disable the option "Optimized Sleep State for Modern Standby".
+
+Optimized Sleep State for Modern Standby (after BIOS 1.35 the wording has changed to "Sleep State"):
+
+- Disabled: "legacy" S3 sleep (after BIOS 1.35 the wording has changed to "Linux")
+- Enabled: modern standby (after BIOS 1.35 the wording has changed to "Windows 10")
+
+By setting this option to "Disabled", a warning will appear. The warning describes that a reinstallation of your OS might be mandatory. Accept the warning and both Windows and Linux should work fine. You can do this step even if you already installed a patch to enable s3 sleep. After disabling the optimized sleep state in the bios, and if you did the method to enable s3 sleep before the 1.33 bios update, it is best to remove `GRUB_EARLY_INITRD_LINUX_CUSTOM="/acpi_override"` in your /etc/default/grub (if you placed that there before), and regenerate the grub cfg using `sudo update-grub`. Do not forget to remove the acpi_override file as well.
+
+Reboot and verify whether S3 is working by running:
+
+`# dmesg | grep -i "acpi: (supports"`
+
+You should now see something like this:
+
+`[    0.230796] ACPI: (supports S0 S3 S4 S5)`
+
 
 #### Advertise S3
 
