@@ -66,8 +66,6 @@ If for some reason you can't update your kernel using the normal way, the follow
 - https://github.com/pimlie/ubuntu-mainline-kernel.sh
 - https://github.com/bkw777/mainline
 
-**Note: There seems to be a regression on Kernel 5.11 (last tested with 5.11.3), please avoid using it**
-
 **Note: If you encounter `error: /vmlinux-<version number> has invalid signature.` on boot, you need to disable secure boot on the UEFI setting or follow https://gist.github.com/maxried/796d1f3101b3a03ca153fa09d3af8a11**
 
 ### Suspend
