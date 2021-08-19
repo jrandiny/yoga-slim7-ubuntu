@@ -268,7 +268,10 @@ echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 ```
 
-Tested on Kernel 5.8
+Tested on Kernel 5.8 and 5.11
+
+Someone have also created a simple gnome extension to toggle this setting form the top bar
+https://gitlab.com/annexhack/conservation-mode-lenovo/
 
 ## Thanks
 - @SteveImmanuel for the information regarding microphone on kernel 5.7
