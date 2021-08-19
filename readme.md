@@ -218,6 +218,8 @@ After unlocking the bios
 - go to `AMD PBS` on the top tab
 - find `S3/Modern Standby Support`
 - Press enter to change the value from `Modern Standby Enable` to `S3 Enable`
+
+Tested on Bios version DMCN38WW
 ### Audio
 If you see only a `Dummy Output` device in your audio-devices list, it is caused by a regression on ALSA https://bugs.launchpad.net/ubuntu/+source/alsa-lib/+bug/1901922
 
