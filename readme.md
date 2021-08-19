@@ -83,9 +83,19 @@ amdgpu 0000:03:00.0: [drm:amdgpu_ring_test_helper [amdgpu]] *ERROR* ring gfx tes
 There are three solutions:
 - Wait until the problem in amdgpu driver is fixed in newer kernel version
 - Wait until Lenovo adds an option in the UEFI to advertise S3 support (similar to the options available in Thinkpad)
-- Modify the system to advertise S3 support (see below)
+- Modify the system to advertise S3 support via modified DSDT (see [DSDT Modification](#modify-dsdt))
+- Use the bios unlock method (see [Unlock BIOS](#bios-unlock))
 
-#### Advertise S3
+Due to the everchanging nature of the Linux Kernel, some fixes may works on some kernel version only. Here are the support table for some of Ubuntu kernel version
+
+| Kernel version | official kernel?   | DSDT Method                   | Bios Unlock Method |
+| -------------- | ------------------ | ----------------------------- | ------------------ |
+| 5.8.0          | :heavy_check_mark: | :heavy_check_mark:            | :heavy_check_mark: |
+| 5.11.0         | :heavy_check_mark: | :negative_squared_cross_mark: | :heavy_check_mark: |
+
+Expanding this list is highly appreciated :)
+
+#### Modify DSDT
 
 **0. Important notes**
 
@@ -183,8 +193,14 @@ If you are using mainline kernel, skip this step.
 
 If you are using the official kernel (for example in Ubuntu 20.10) be aware that you need to disable secure boot because of the default behaviour of Ubuntu kernel (relevant discussion [#10](https://github.com/jrandiny/yoga-slim7-ubuntu/issues/10)).
 
+#### Bios Unlock
 
+Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
 
+After unlocking the bios
+- go to `AMD PBS` on the top tab
+- find `S3/Modern Standby Support`
+- Press enter to change the value from `Modern Standby Enable` to `S3 Enable`
 ### Audio
 If you see only a `Dummy Output` device in your audio-devices list, it is caused by a regression on ALSA https://bugs.launchpad.net/ubuntu/+source/alsa-lib/+bug/1901922
 
@@ -216,10 +232,6 @@ The matter is fully discussed in the following community forums:
 - https://askubuntu.com/questions/1226036/intel-ax200-wi-fi-adapter-not-working
 
 If you encounter this problem, please [disable it](https://www.windowscentral.com/how-disable-windows-10-fast-startup) and Wi-Fi should work without problems.
-
-## Extra: BIOS Unlock
-
-Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
 
 ## Extra: Battery Conservation Mode
 
