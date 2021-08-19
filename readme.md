@@ -29,6 +29,25 @@ Legend:
 | External display (HDMI)      | :hammer_and_wrench:      | :heavy_check_mark:       | Kernel update is required (see [below](#Graphic))                                                                                                  |
 | Suspend                      | :hammer_and_wrench:      | :hammer_and_wrench:      | See detail [below](#Suspend)                                                                                                                       |
 
+## Table of Content
+- [Linux on Lenovo Yoga Slim 7 AMD](#linux-on-lenovo-yoga-slim-7-amd)
+  - [About](#about)
+  - [Summary](#summary)
+  - [Table of Content](#table-of-content)
+  - [System Output](#system-output)
+  - [Fixes](#fixes)
+    - [Graphic](#graphic)
+    - [Suspend](#suspend)
+      - [Background](#background)
+      - [Possible Solutions](#possible-solutions)
+      - [Modify DSDT](#modify-dsdt)
+      - [Bios Unlock](#bios-unlock)
+    - [Audio](#audio)
+    - [Microphone](#microphone)
+    - [Wi-Fi](#wi-fi)
+  - [Extra: Battery Conservation Mode](#extra-battery-conservation-mode)
+  - [Thanks](#thanks)
+
 ## System Output
 
 `lsusb`, `lspci` and other output can be found on the [System Output](system-output.md) page.
