@@ -215,9 +215,11 @@ If you are using the official kernel (for example in Ubuntu 20.10) be aware that
 Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
 
 After unlocking the bios
-- go to `AMD PBS` on the top tab
+- go to `AMD PBS` on the top tab (on the bios)
 - find `S3/Modern Standby Support`
 - Press enter to change the value from `Modern Standby Enable` to `S3 Enable`
+
+![bios image](bios.jpg)
 
 Tested on Bios version DMCN38WW
 ### Audio
@@ -278,7 +280,7 @@ Someone have also created a simple gnome extension to toggle this setting form t
 https://gitlab.com/annexhack/conservation-mode-lenovo/
 
 ## Thanks
-- @SteveImmanuel for the information regarding microphone on kernel 5.7
+- @SteveImmanuel for the information regarding microphone on kernel 5.7 and testing
 - @nopmop for the audio workaround
 - https://www.reddit.com/r/linuxhardware/comments/i28nm5/ideapad_14are05_s3_sleep_fix/ 
 - https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Yoga_(Gen_3)#Enabling_S3_(before_BIOS_version_1.33)
