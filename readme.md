@@ -4,7 +4,9 @@
 
 This are various tweaks and fix to run Linux on Lenovo Yoga Slim 7. This note is validated on the following configuration
 - Ubuntu 20.04.2 and 20.10
-- Lenovo Yoga Slim 7 AMD (Ryzen 7)
+- Lenovo Yoga Slim 7 AMD 14ARE05 (Ryzen 7)
+
+**Lenovo Yoga Slim 7 Pro is a different model**
 
 ## Summary
 
