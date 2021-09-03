@@ -110,6 +110,7 @@ Due to the everchanging nature of the Linux Kernel, some fixes may works on some
 | Kernel version | Official kernel?   | DSDT Method                   | Bios Unlock Method |
 | -------------- | ------------------ | ----------------------------- | ------------------ |
 | 5.8.0          | :heavy_check_mark: | :heavy_check_mark:            | :heavy_check_mark: |
+| 5.10.0         |                    | :heavy_check_mark:            |                    |
 | 5.11.0         | :heavy_check_mark: | :negative_squared_cross_mark: | :heavy_check_mark: |
 
 Expanding this list is highly appreciated :)
