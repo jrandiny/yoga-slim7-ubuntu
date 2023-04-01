@@ -214,9 +214,16 @@ If you are using the official kernel (for example in Ubuntu 20.10) be aware that
 
 #### Bios Unlock
 
-Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality which can be enabled by writing special value on the i/o port. You can use the following tools to do that https://github.com/esno/yoga-bios-unlock. Use at your own risk
+The following access advanced options of the BIOS and changing the wrong ones can result in a bricked device. Use at your own risk.
 
-After unlocking the bios
+Lenovo has hidden some advanced options that are useful for overclocking, enabling s3 support, and other advanced functionality.
+
+The advanced BIOS can be accessed in two ways:
+
+* Using a special boot loader to access the exposed advanced BIOS options https://github.com/DavidS95/Smokeless_UMAF. After booting choose the first option (Device Manager) and follow the steps after unlocking the BIOS.
+* Writing a special value on the I/O port, which can be done with the following tool https://github.com/esno/yoga-bios-unlock
+
+After unlocking the BIOS
 - go to `AMD PBS` on the top tab (on the bios)
 - find `S3/Modern Standby Support`
 - Press enter to change the value from `Modern Standby Enable` to `S3 Enable`
